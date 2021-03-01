@@ -6,11 +6,11 @@ import { SearchWrapper, InputWrapper, ButtonWrapper } from "./styles";
 const Form = (props) => {
   const [username, setUsername] = useState("");
 
-  const PegarPerfil = (event) => {
-    event.preventDefault();
+  const PegarPerfil = (e) => {
+    e.preventDefault();
 
     axios.get(`https://api.github.com/users/${username}`).then((resp) => {
-      props.onSubmit(resp.data);
+      props.onSubmiz(resp.data);
       setUsername("");
     });
   };
@@ -20,7 +20,7 @@ const Form = (props) => {
       <InputWrapper
         type="text"
         value={username}
-        onChange={(event) => setUsername(event.target.value)}
+        onChange={(e) => setUsername(e.target.value)}
       />
       <ButtonWrapper type="submit">Search Profile</ButtonWrapper>
     </SearchWrapper>

@@ -5,16 +5,16 @@ import GithubInfo from "../homework/Propzao";
 import { HomeWorkWrapper } from "./styles";
 
 const HomeWork = () => {
-  const [cards, setCards] = useState([]);
+  const [card, setCards] = useState([]);
 
   const addNewCard = (cardInfo) => {
-    setCards(cards.concat(cardInfo));
+    setCards(card.concat(cardInfo));
   };
 
   return (
     <HomeWorkWrapper>
-      <Form onSubmit={addNewCard} />
-      <GithubInfo cards={cards} />
+      <Form onSubmiz={addNewCard} />
+      <GithubInfo cards={card} />
     </HomeWorkWrapper>
   );
 };

@@ -6,7 +6,7 @@ const GithubInfo = ({ cards }) => (
   <div>
     {cards.map((c) => (
       <GithubSection>
-        <ImgWrapper alt="avatar" src={c.avatar_url} />
+        <ImgWrapper alt={c.login} src={c.avatar_url} />
         <div>
           <Hdois>Login: {c.login}</Hdois>
           <Hdois>Name: {c.name}</Hdois>
